@@ -5283,8 +5283,25 @@ var $author$project$Page$Login$footer = A2(
 						]))
 				]))
 		]));
-var $elm$svg$Svg$trustedNode = _VirtualDom_nodeNS('http://www.w3.org/2000/svg');
-var $elm$svg$Svg$svg = $elm$svg$Svg$trustedNode('svg');
+var $elm$html$Html$Attributes$height = function (n) {
+	return A2(
+		_VirtualDom_attribute,
+		'height',
+		$elm$core$String$fromInt(n));
+};
+var $elm$html$Html$img = _VirtualDom_node('img');
+var $elm$html$Html$Attributes$src = function (url) {
+	return A2(
+		$elm$html$Html$Attributes$stringProperty,
+		'src',
+		_VirtualDom_noJavaScriptOrHtmlUri(url));
+};
+var $elm$html$Html$Attributes$width = function (n) {
+	return A2(
+		_VirtualDom_attribute,
+		'width',
+		$elm$core$String$fromInt(n));
+};
 var $author$project$Page$Login$header = A2(
 	$elm$html$Html$div,
 	_List_fromArray(
@@ -5297,7 +5314,7 @@ var $author$project$Page$Login$header = A2(
 			$elm$html$Html$div,
 			_List_fromArray(
 				[
-					$elm$html$Html$Attributes$class('header header-logged-out width-full pt-5 pb-4')
+					$elm$html$Html$Attributes$class('header header-logged-out width-full pt-5')
 				]),
 			_List_fromArray(
 				[
@@ -5318,12 +5335,28 @@ var $author$project$Page$Login$header = A2(
 								]),
 							_List_fromArray(
 								[
-									A2($elm$svg$Svg$svg, _List_Nil, _List_Nil)
+									A2(
+									$elm$html$Html$img,
+									_List_fromArray(
+										[
+											$elm$html$Html$Attributes$src('assets/github-logo.png'),
+											$elm$html$Html$Attributes$width(80),
+											$elm$html$Html$Attributes$height(80)
+										]),
+									_List_Nil)
 								]))
 						]))
 				]))
 		]));
+var $elm$html$Html$button = _VirtualDom_node('button');
+var $elm$html$Html$form = _VirtualDom_node('form');
+var $elm$html$Html$h1 = _VirtualDom_node('h1');
 var $elm$html$Html$Attributes$id = $elm$html$Html$Attributes$stringProperty('id');
+var $elm$html$Html$input = _VirtualDom_node('input');
+var $elm$html$Html$label = _VirtualDom_node('label');
+var $elm$html$Html$Attributes$name = $elm$html$Html$Attributes$stringProperty('name');
+var $elm$html$Html$p = _VirtualDom_node('p');
+var $elm$html$Html$Attributes$type_ = $elm$html$Html$Attributes$stringProperty('type');
 var $author$project$Page$Login$submitForm = A2(
 	$elm$html$Html$div,
 	_List_fromArray(
@@ -5339,7 +5372,119 @@ var $author$project$Page$Login$submitForm = A2(
 					$elm$html$Html$Attributes$class('auth-form px-3'),
 					$elm$html$Html$Attributes$id('login')
 				]),
-			_List_Nil)
+			_List_fromArray(
+				[
+					A2(
+					$elm$html$Html$form,
+					_List_Nil,
+					_List_fromArray(
+						[
+							A2(
+							$elm$html$Html$div,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$class('auth-form-header p-0')
+								]),
+							_List_fromArray(
+								[
+									A2(
+									$elm$html$Html$h1,
+									_List_Nil,
+									_List_fromArray(
+										[
+											$elm$html$Html$text('Sign in to GitHub')
+										]))
+								])),
+							A2(
+							$elm$html$Html$div,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$class('auth-form-body mt-3')
+								]),
+							_List_fromArray(
+								[
+									A2(
+									$elm$html$Html$label,
+									_List_fromArray(
+										[
+											$elm$html$Html$Attributes$class('login_field')
+										]),
+									_List_fromArray(
+										[
+											$elm$html$Html$text('Username or email address'),
+											A2(
+											$elm$html$Html$input,
+											_List_fromArray(
+												[
+													$elm$html$Html$Attributes$class('form-control input-block'),
+													$elm$html$Html$Attributes$type_('username'),
+													$elm$html$Html$Attributes$name('username')
+												]),
+											_List_Nil)
+										])),
+									A2(
+									$elm$html$Html$label,
+									_List_fromArray(
+										[
+											$elm$html$Html$Attributes$class('login_field')
+										]),
+									_List_fromArray(
+										[
+											$elm$html$Html$text('Password'),
+											A2(
+											$elm$html$Html$a,
+											_List_fromArray(
+												[
+													$elm$html$Html$Attributes$class('label-link'),
+													$elm$html$Html$Attributes$href('/password_reset')
+												]),
+											_List_fromArray(
+												[
+													$elm$html$Html$text('Forgot password?')
+												])),
+											A2(
+											$elm$html$Html$input,
+											_List_fromArray(
+												[
+													$elm$html$Html$Attributes$class('form-control form-control input-block'),
+													$elm$html$Html$Attributes$type_('password'),
+													$elm$html$Html$Attributes$name('password')
+												]),
+											_List_Nil)
+										])),
+									A2(
+									$elm$html$Html$button,
+									_List_fromArray(
+										[
+											$elm$html$Html$Attributes$class('btn btn-primary btn-block')
+										]),
+									_List_fromArray(
+										[
+											$elm$html$Html$text('Submit')
+										]))
+								]))
+						])),
+					A2(
+					$elm$html$Html$p,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$class('create-account-callout mt-3')
+						]),
+					_List_fromArray(
+						[
+							$elm$html$Html$text('New to GitHub? '),
+							A2(
+							$elm$html$Html$a,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$href('/join?source=login')
+								]),
+							_List_fromArray(
+								[
+									$elm$html$Html$text('Create an account')
+								]))
+						]))
+				]))
 		]));
 var $author$project$Page$Login$view = function (model) {
 	return A2(
