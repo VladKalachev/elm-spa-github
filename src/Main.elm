@@ -13,11 +13,14 @@ type alias Model =
 
 -- MAIN
 main =
-    Browser.sandbox 
+    Browser.application 
     { 
-      init = initialModel,
-      update = update, 
-      view = view
+      init = initialModel
+      , update = update
+      , view = view
+      , subscriptions = \_ -> Sub.none
+      , onUrlChange = UrlChanged
+      , onUrlRequest = LinkClicked
     }
 
 -- INIT
