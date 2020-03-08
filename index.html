@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="elm.js"></script>
+</head>
+<body class="logged-out env-production page-responsive session-authentication intent-mouse" >
+    <div id="root"></div>
+</body>
+<script>
+    var app = Elm.Page.Login.init({
+      node: document.getElementById("root")
+    });      
+</script>
+</html>
