@@ -5170,6 +5170,8 @@ var $author$project$Page$Login$update = F2(
 	function (data, model) {
 		return data;
 	});
+var $elm$html$Html$div = _VirtualDom_node('div');
+var $elm$html$Html$a = _VirtualDom_node('a');
 var $elm$json$Json$Encode$string = _Json_wrap;
 var $elm$html$Html$Attributes$stringProperty = F2(
 	function (key, string) {
@@ -5179,8 +5181,6 @@ var $elm$html$Html$Attributes$stringProperty = F2(
 			$elm$json$Json$Encode$string(string));
 	});
 var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
-var $elm$html$Html$div = _VirtualDom_node('div');
-var $elm$html$Html$a = _VirtualDom_node('a');
 var $elm$html$Html$Attributes$href = function (url) {
 	return A2(
 		$elm$html$Html$Attributes$stringProperty,
@@ -5283,37 +5283,70 @@ var $author$project$Page$Login$footer = A2(
 						]))
 				]))
 		]));
+var $elm$svg$Svg$trustedNode = _VirtualDom_nodeNS('http://www.w3.org/2000/svg');
+var $elm$svg$Svg$svg = $elm$svg$Svg$trustedNode('svg');
+var $author$project$Page$Login$header = A2(
+	$elm$html$Html$div,
+	_List_fromArray(
+		[
+			$elm$html$Html$Attributes$class('position-relative js-header-wrapper')
+		]),
+	_List_fromArray(
+		[
+			A2(
+			$elm$html$Html$div,
+			_List_fromArray(
+				[
+					$elm$html$Html$Attributes$class('header header-logged-out width-full pt-5 pb-4')
+				]),
+			_List_fromArray(
+				[
+					A2(
+					$elm$html$Html$div,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$class('container clearfix width-full text-center')
+						]),
+					_List_fromArray(
+						[
+							A2(
+							$elm$html$Html$a,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$class('header-logo'),
+									$elm$html$Html$Attributes$href('https://github.com/')
+								]),
+							_List_fromArray(
+								[
+									A2($elm$svg$Svg$svg, _List_Nil, _List_Nil)
+								]))
+						]))
+				]))
+		]));
+var $elm$html$Html$Attributes$id = $elm$html$Html$Attributes$stringProperty('id');
+var $author$project$Page$Login$submitForm = A2(
+	$elm$html$Html$div,
+	_List_fromArray(
+		[
+			$elm$html$Html$Attributes$class('application-main')
+		]),
+	_List_fromArray(
+		[
+			A2(
+			$elm$html$Html$div,
+			_List_fromArray(
+				[
+					$elm$html$Html$Attributes$class('auth-form px-3'),
+					$elm$html$Html$Attributes$id('login')
+				]),
+			_List_Nil)
+		]));
 var $author$project$Page$Login$view = function (model) {
 	return A2(
 		$elm$html$Html$div,
+		_List_Nil,
 		_List_fromArray(
-			[
-				$elm$html$Html$Attributes$class('logged-out env-production page-responsive session-authentication intent-mouse')
-			]),
-		_List_fromArray(
-			[
-				A2(
-				$elm$html$Html$div,
-				_List_fromArray(
-					[
-						$elm$html$Html$Attributes$class('position-relative js-header-wrapper')
-					]),
-				_List_fromArray(
-					[
-						$elm$html$Html$text('log')
-					])),
-				A2(
-				$elm$html$Html$div,
-				_List_fromArray(
-					[
-						$elm$html$Html$Attributes$class('application-main')
-					]),
-				_List_fromArray(
-					[
-						$elm$html$Html$text('log')
-					])),
-				$author$project$Page$Login$footer
-			]));
+			[$author$project$Page$Login$header, $author$project$Page$Login$submitForm, $author$project$Page$Login$footer]));
 };
 var $author$project$Page$Login$main = $elm$browser$Browser$sandbox(
 	{init: $author$project$Page$Login$initialModel, update: $author$project$Page$Login$update, view: $author$project$Page$Login$view});
