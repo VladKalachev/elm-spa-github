@@ -19,8 +19,8 @@ main =
       , update = update
       , view = view
       , subscriptions = \_ -> Sub.none
-      , onUrlChange = UrlChanged
-      , onUrlRequest = LinkClicked
+     -- , onUrlChange = UrlChanged
+     -- , onUrlRequest = LinkClicked
     }
 
 -- INIT
