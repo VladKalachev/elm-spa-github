@@ -63,7 +63,23 @@ header
 
              ]
              , div [ class "Header-item Header-item--full flex-column flex-lg-row width-full flex-order-2 flex-lg-order-none mr-0 mr-lg-3 mt-3 mt-lg-0 Details-content--hidden" ] [
+                 div [ class "header-search flex-self-stretch flex-lg-self-auto mr-0 mr-lg-3 mb-3 mb-lg-0 scoped-search site-scoped-search js-site-search position-relative js-jump-to" ] [
+                     div [ class "position-relative" ] [
+                         div [ class "js-site-search-form" ] [
+                             div [ class "form-control input-sm header-search-wrapper p-0 header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center js-chromeless-input-container" ] [
+                                input [ placeholder "Search or jump to…", class "form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable" ] []
+                                , img [src "https://github.githubassets.com/images/search-key-slash.svg", class "mr-2 header-search-key-slash" ] []
+                                , div [ class "Box position-absolute overflow-hidden d-none jump-to-suggestions js-jump-to-suggestions-container" ] [
 
+                                ]
+                             ] 
+                            
+                         ]
+                     ]
+                 ]
+                 , div [ class "d-flex flex-column flex-lg-row flex-self-stretch flex-lg-self-auto" ] [
+
+                 ]
              ]
              , div [ class "Header-item Header-item--full flex-justify-center d-lg-none position-relative" ] [
 
