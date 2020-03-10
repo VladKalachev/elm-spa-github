@@ -196,8 +196,49 @@ content
         , div [ class "col-12 d-md-none" ] [
 
         ]
+        -- center
         , div [ class "col-lg-9 col-md-8 col-12 float-md-left pl-md-2" ] [
-
+            div [ class "UnderlineNav width-full user-profile-nav js-sticky top-0" ] [
+                nav [ class "UnderlineNav-body" ] [
+                    a [ class "UnderlineNav-item mr-0 mr-md-1 mr-lg-3 selected" ] [ text "Overview" ]
+                    , a [ class "UnderlineNav-item mr-0 mr-md-1 mr-lg-3"] [
+                        text "Repositories",
+                        span [ class "Counter hide-lg hide-md hide-sm" ] [
+                            text "83"
+                        ]
+                    ]
+                ]
+            ]
+            , div [ class "position-relative" ] [
+                div [ class "mt-4" ] [
+                    div [ class "js-pinned-items-reorder-container" ] [
+                        div [ class "js-pinned-items-reorder-form" ] [
+                            ul [ class "d-flex flex-wrap list-style-none gutter-condensed mb-4 js-pinned-items-reorder-list" ] [
+                                li [ class "col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch" ] [
+                                    div [ class "Box pinned-item-list-item d-flex p-3 width-full js-pinned-item-list-item public source reorderable sortable-button-item" ] [
+                                        div [ class "pinned-item-list-item-content" ] [
+                                             div [ class "d-flex width-full flex-items-center position-relative" ] [
+                                                a [ class "text-bold flex-auto min-width-0" ] [
+                                                    span [ class "network-react-csharp" ] [ text "network-react-csharp" ]
+                                                ]
+                                            ]
+                                            , p [ class "pinned-item-desc text-gray text-small d-block mt-2 mb-3"] [
+                                                text "Network written in C#(back-end) and React/TypeScript/MobX (front-end)"
+                                            ]
+                                            , p [ class "mb-0 f6 text-gray" ] [
+                                                span [ class "d-inline-block mr-3" ] [
+                                                    span [ class "repo-language-color", style "background-color" "#178600" ] []
+                                                    , span [  ] [ text "C#" ]
+                                                ]
+                                            ] 
+                                        ]
+                                    ]
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+            ]
         ] 
      ]
   ]
