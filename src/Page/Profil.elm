@@ -1,7 +1,7 @@
 module Page.Profil exposing (..)
 
 import Browser
-import Html exposing (div, p, a, ul, li, text, img, h1, label, button, input, span, nav)
+import Html exposing (div, p, a, ul, li, text, img, h1, label, button, input, span, nav, button)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import Http
@@ -150,12 +150,44 @@ content
                         ]
                     ]
                 ]
+                ,
+                div [ class "vcard-names-container float-left col-9 col-md-12 pt-1 pt-md-3 pb-1 pb-md-3 js-sticky js-user-profile-sticky-fields" ] [
+                    h1 [ class "vcard-names pl-2 pl-md-0" ] [
+                        span [ class "p-name vcard-fullname d-block overflow-hidden" ] [ text "Corvax"],
+                        span [ class "p-nickname vcard-username d-block" ] [ text "VladKalachev"]
+                    ]
+                ]
              ]
              , div [ class "mb-2 user-status-container d-md-none"] [
 
              ]
              , div [ class "d-none d-md-block" ] [
-
+                 div [ class "js-profile-editable-area" ] [
+                     div [ class "hide-sm hide-md" ] [
+                         button [ class "btn btn-block mt-2 mb-3 js-profile-editable-edit-button" ] [ text "Edit profile" ]
+                     ]
+                     , div [ class "p-note user-profile-bio js-user-profile-bio" ] [
+                         div [] [ text "Senior web developer React/Redux/TS/Elm https://www.linkedin.com/in/vlad-kalachev-ab87b312a/"] 
+                     ]
+                     , ul [ class "vcard-details mb-3" ] [
+                         li [ class "vcard-detail pt-1 css-truncate css-truncate-target" ] [
+                             span [ class "p-org" ] [
+                                 div [ ] [ text "Technoserv" ]
+                             ]
+                         ]
+                         , li [ class "vcard-detail pt-1 css-truncate css-truncate-target"] [
+                             span [ class "p-label" ] [
+                                 text "Moscow"
+                             ]
+                         ]
+                         , li [ class "vcard-detail pt-1 css-truncate css-truncate-target" ] [
+                             a [ class "u-email"] [ text "vlvete1990@yandex.ru" ]
+                         ]
+                         , li [ class "vcard-detail pt-1 css-truncate css-truncate-target" ] [
+                             a [ href "http://webtricks-master.ru/" ] [ text "http://webtricks-master.ru/" ]
+                         ]
+                     ]
+                 ]
              ]
              , div [ class "my-1 js-pro-badge d-none" ] [
 
