@@ -125,7 +125,31 @@ content
 
             --  ]
               div [ class "clearfix"] [
-
+                div [ class "float-left col-3 col-md-12 pr-3 pr-md-0" ] [
+                    a [ class "u-photo d-block tooltipped tooltipped-s" ] [
+                         img [ src "https://avatars3.githubusercontent.com/u/12778181?s=460&v=4", width 250, height 250, class "avatar width-full height-full avatar-before-user-status"] []
+                    ] 
+                ]
+                , div [ class "float-md-left col-12" ] [
+                    div [ class "user-status-container position-relative hide-sm hide-md" ] [
+                        div [ class "f5 js-user-status-context" ] [
+                            div [ class "js-user-status-container border-top-0 rounded-top-0 rounded-bottom-1 p-2 border"] [
+                                div [ class "js-user-status-details details-reset details-overlay details-overlay-dark" ] [
+                                    div [ class "btn-link btn-block link-gray no-underline js-toggle-user-status-edit toggle-user-status-edit " ] [
+                                        div [ class "d-flex" ] [
+                                            div [ class "f6 lh-condensed user-status-header d-inline-flex user-status-emoji-only-header circle"] []
+                                            , div [ class "pt-1 ws-normal user-status-message-wrapper f6"] [
+                                                div [ class "d-inline-block text-gray-dark" ] [
+                                                    span [ class "text-gray ml-2"] [ text "Set status"]
+                                                ]
+                                            ]
+                                        ]
+                                    ]
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
              ]
              , div [ class "mb-2 user-status-container d-md-none"] [
 
