@@ -1,7 +1,7 @@
 module Page.Profil exposing (..)
 
 import Browser
-import Html exposing (div, p, a, ul, li, text, img, h1, label, button, input, span)
+import Html exposing (div, p, a, ul, li, text, img, h1, label, button, input, span, nav)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import Http
@@ -77,27 +77,74 @@ header
                          ]
                      ]
                  ]
-                 , div [ class "d-flex flex-column flex-lg-row flex-self-stretch flex-lg-self-auto" ] [
-
+                 , nav [ class "d-flex flex-column flex-lg-row flex-self-stretch flex-lg-self-auto" ] [
+                     a [ href "https://github.com/dashboard", class "Header-link d-block d-lg-none py-2 py-lg-0 border-top border-lg-top-0 border-white-fade-15" ] [ 
+                         text "Dashboard"
+                       ]
+                     , a [ href "https://github.com/pulls", class "js-selected-navigation-item Header-link  mr-0 mr-lg-3 py-2 py-lg-0 border-top border-lg-top-0 border-white-fade-15" ] [
+                         text "Pull requests"
+                     ]
+                     , div [ class "mr-0 mr-lg-3 py-2 py-lg-0 border-top border-lg-top-0 border-white-fade-15" ] [
+                         a [ href "https://github.com/marketplace", class "js-selected-navigation-item Header-link" ] [
+                             text "Marketplace"
+                         ]
+                     ]
+                     , a [ href "https://github.com/explore", class "js-selected-navigation-item Header-link  mr-0 mr-lg-3 py-2 py-lg-0 border-top border-lg-top-0 border-white-fade-15" ] [
+                        text "Explore"
+                     ]
                  ]
              ]
              , div [ class "Header-item Header-item--full flex-justify-center d-lg-none position-relative" ] [
 
              ]
              , div [ class "Header-item mr-0 mr-lg-3 flex-order-1 flex-lg-order-none" ] [
-
+                 a [ class "Header-link notification-indicator position-relative tooltipped tooltipped-sw js-socket-channel js-notification-indicator" ] [
+                     span [ class "js-indicator-modifier mail-status unread" ] []
+                 ]
              ]
              , div [ class "Header-item position-relative d-none d-lg-flex" ] [
-
+                 div [ class "details-overlay details-reset" ] []
              ]
              , div [ class "Header-item position-relative mr-0 d-none d-lg-flex" ] [
-
+                 div [ class "details-overlay details-reset js-feature-preview-indicator-container" ] [
+                     div [ class "Header-link" ] [
+                         img [ src "https://avatars1.githubusercontent.com/u/12778181?s=60&v=4", width 20, height 20, class "avatar "] []
+                         , div [ class "feature-preview-indicator js-feature-preview-indicator hidden" ] []
+                         , div [ class "dropdown-caret" ] []
+                     ]
+                 ]
              ]
          ]
      ]
 
 content 
- = div [ class "application-main" ] [  ]
+ = div [ class "application-main" ] [ 
+     div [ class "container-xl clearfix px-3 mt-4" ] [
+         div [ class "h-card col-lg-3 col-md-4 col-12 float-md-left pr-md-3 pr-xl-6" ] [
+            --  div [ class "user-profile-sticky-bar js-user-profile-sticky-bar is-stuck" ] [
+
+            --  ]
+              div [ class "clearfix"] [
+
+             ]
+             , div [ class "mb-2 user-status-container d-md-none"] [
+
+             ]
+             , div [ class "d-none d-md-block" ] [
+
+             ]
+             , div [ class "my-1 js-pro-badge d-none" ] [
+
+             ]
+         ]
+        , div [ class "col-12 d-md-none" ] [
+
+        ]
+        , div [ class "col-lg-9 col-md-8 col-12 float-md-left pl-md-2" ] [
+
+        ] 
+     ]
+  ]
 
 -- footer: Model -> Html Msg
 footer 
