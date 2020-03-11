@@ -1,19 +1,23 @@
 module Page.Profil exposing (..)
 
 import Browser
-import Html exposing (div, p, a, ul, li, text, img, h1, label, button, input, span, nav, button)
+import Html exposing (div, p, a, ul, li, text, img, h1, label, button, input, span, nav, button, Html)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import Http
 import Svg exposing (svg, path)
 import Svg.Attributes exposing (d)
+import Debug 
 
 -- view : Model -> Html Msg
 
-type alias Model =
-  { 
-      data: String
-  }
+-- type alias Model =
+--   { 
+--       data: String
+--   }
+
+type alias Model = 
+    { count: Int }
 
 type alias Form =
     { email : String
@@ -30,21 +34,29 @@ main =
     }
 
 -- INIT
--- initialModel: Model
-initialModel =
-    {
-       data = []
-    }
+initialModel: Model
+initialModel = 
+    { count = 0 }
 
 -- VIEW
 -- view : Model -> Html Msg
+
+
 view model =
     div [ ] 
            [ 
              header
-            ,content
+            , content
             , footer
+            , wrapperDemo
+           -- Debug model
            ]
+
+wrapperDemo
+  = div [ class "demo" ] [ text "Demo" ]
+   -- = div [ class "demo", onClick Increment ] [ text data ]
+
+
 
 header 
     = div [class "position-relative js-header-wrapper"]
@@ -294,7 +306,13 @@ footer
 
 
 
+
+-- type Msg = Increment
 -- UPDATE
 -- update : Msg -> Model -> (Model, Cmd Msg)
-update data model =
+-- update: Msg -> Model -> Model
+update data model =  
     data
+--    case msg of
+--     Increment ->
+--       { model | count = count + 1 }
